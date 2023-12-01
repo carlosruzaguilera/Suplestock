@@ -339,31 +339,26 @@ void establecerNuevaCantidadStock() {
     printf("\nProducto con ID %d no encontrado.\n", id);
 }
 
-void establecerNuevaCantidadStock() {
-    int id, nuevaCantidad;
-    printf("\nIngrese ID del producto a actualizar: ");
-    scanf("%d", &id);
+void consultarStockPorNombre() {
+    char nombreBuscado[50];
+    int encontrado = 0;
 
-    printf("\nIngrese la nueva cantidad total en stock: ");
-    scanf("%d", &nuevaCantidad);
+    printf("\nIngrese el nombre del producto a buscar: ");
+    scanf("%s", nombreBuscado);
 
-    if (nuevaCantidad < 0) {
-        printf("\nNo se puede establecer una cantidad negativa en stock.\n");
-        return;
-    }
-
-    int indice = calcularHash(id);
-    Producto *producto = tablaHash[indice];
-
-    // Buscar en la lista enlazada
-    while (producto != NULL) {
-        if (producto->id == id) {
-            producto->cantidad_stock = nuevaCantidad;  // Establecer la nueva cantidad
-            printf("\nStock actualizado. Nueva cantidad en stock de '%s': %d\n", producto->nombre, producto->cantidad_stock);
-            return;
+    for (int i = 0; i < TAM_TABLA; i++) {
+        Producto *producto = tablaHash[i];
+        while (producto != NULL) {
+            if (strcmp(producto->nombre, nombreBuscado) == 0) {
+                printf("\nProducto encontrado: %s, ID: %d, Cantidad en stock: %d\n", 
+                       producto->nombre, producto->id, producto->cantidad_stock);
+                encontrado = 1;
+            }
+            producto = producto->siguiente;
         }
-        producto = producto->siguiente;
     }
 
-    printf("\nProducto con ID %d no encontrado.\n", id);
+    if (!encontrado) {
+        printf("\nProducto con nombre '%s' no encontrado.\n", nombreBuscado);
+    }
 }
