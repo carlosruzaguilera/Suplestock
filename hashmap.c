@@ -252,3 +252,27 @@ void actualizarStock() {
 
     printf("\nProducto con ID %d no encontrado.\n", id);
 }
+
+void anadirCantidadStock() {
+    int id, cantidadAAnadir;
+    printf("\nIngrese ID del producto a añadir stock: ");
+    scanf("%d", &id);
+
+    printf("\nIngrese la cantidad a añadir: ");
+    scanf("%d", &cantidadAAnadir);
+
+    int indice = calcularHash(id);
+    Producto *producto = tablaHash[indice];
+
+    // Buscar en la lista enlazada
+    while (producto != NULL) {
+        if (producto->id == id) {
+            producto->cantidad_stock += cantidadAAnadir;  // Añadir al stock
+            printf("\nCantidad añadida. Nueva cantidad en stock de '%s': %d\n", producto->nombre, producto->cantidad_stock);
+            return;
+        }
+        producto = producto->siguiente;
+    }
+
+    printf("\nProducto con ID %d no encontrado.\n", id);
+}
