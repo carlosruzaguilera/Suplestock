@@ -186,3 +186,24 @@ void agregarProductoDetalle(int id, char *nombre, float precio_compra, float pre
 
     printf("\nProducto '%s' agregado correctamente.\n", nombre);
 }
+
+void mostrarListaCompletaProductos() {
+    printf("\n--- Lista Completa de Productos en Inventario ---\n");
+
+    int hayProductos = 0;
+    for (int i = 0; i < TAM_TABLA; i++) {
+        Producto *producto = tablaHash[i];
+        while (producto != NULL) {
+            printf("\nID: %d, Nombre: %s, Precio Compra: %.2f, Precio Venta: %.2f, Stock: %d\n",
+                   producto->id, producto->nombre, producto->precio_compra, 
+                   producto->precio_venta, producto->cantidad_stock);
+            producto = producto->siguiente;
+            hayProductos = 1;
+        }
+    }
+
+    if (!hayProductos) {
+        printf("\nNo hay productos en el inventario.\n");
+    }
+}
+
