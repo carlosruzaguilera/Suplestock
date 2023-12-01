@@ -309,3 +309,32 @@ void restarCantidadStock() {
 
     printf("\nProducto con ID %d no encontrado.\n", id);
 }
+
+void establecerNuevaCantidadStock() {
+    int id, nuevaCantidad;
+    printf("\nIngrese ID del producto a actualizar: ");
+    scanf("%d", &id);
+
+    printf("\nIngrese la nueva cantidad total en stock: ");
+    scanf("%d", &nuevaCantidad);
+
+    if (nuevaCantidad < 0) {
+        printf("\nNo se puede establecer una cantidad negativa en stock.\n");
+        return;
+    }
+
+    int indice = calcularHash(id);
+    Producto *producto = tablaHash[indice];
+
+    // Buscar en la lista enlazada
+    while (producto != NULL) {
+        if (producto->id == id) {
+            producto->cantidad_stock = nuevaCantidad;  // Establecer la nueva cantidad
+            printf("\nStock actualizado. Nueva cantidad en stock de '%s': %d\n", producto->nombre, producto->cantidad_stock);
+            return;
+        }
+        producto = producto->siguiente;
+    }
+
+    printf("\nProducto con ID %d no encontrado.\n", id);
+}
