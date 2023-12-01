@@ -276,3 +276,36 @@ void anadirCantidadStock() {
 
     printf("\nProducto con ID %d no encontrado.\n", id);
 }
+
+void restarCantidadStock() {
+    int id, cantidadARestar;
+    printf("\nIngrese ID del producto a restar stock: ");
+    scanf("%d", &id);
+
+    printf("\nIngrese la cantidad a restar: ");
+    scanf("%d", &cantidadARestar);
+
+    if (cantidadARestar < 0) {
+        printf("\nNo se puede restar una cantidad negativa.\n");
+        return;
+    }
+
+    int indice = calcularHash(id);
+    Producto *producto = tablaHash[indice];
+
+    // Buscar en la lista enlazada
+    while (producto != NULL) {
+        if (producto->id == id) {
+            if (producto->cantidad_stock < cantidadARestar) {
+                printf("\nOperación no válida. La cantidad a restar excede el stock actual.\n");
+                return;
+            }
+            producto->cantidad_stock -= cantidadARestar;  // Restar del stock
+            printf("\nCantidad restada. Nueva cantidad en stock de '%s': %d\n", producto->nombre, producto->cantidad_stock);
+            return;
+        }
+        producto = producto->siguiente;
+    }
+
+    printf("\nProducto con ID %d no encontrado.\n", id);
+}
