@@ -38,3 +38,33 @@ void registrarProducto() {
         actual->siguiente = nuevoProducto;
     }
 }
+
+void eliminarProducto() {
+    int id;
+    printf("\nIngrese ID del producto a eliminar: ");
+    scanf("%d", &id);
+
+    int indice = calcularHash(id);
+    Producto *actual = tablaHash[indice];
+    Producto *anterior = NULL;
+
+    // Buscar en la lista enlazada
+    while (actual != NULL) {
+        if (actual->id == id) {
+            if (anterior == NULL) {
+                // Eliminar el primer producto en la lista
+                tablaHash[indice] = actual->siguiente;
+            } else {
+                // Eliminar un producto que no es el primero
+                anterior->siguiente = actual->siguiente;
+            }
+            free(actual);
+            printf("\nProducto con ID %d eliminado.\n", id);
+            return;
+        }
+        anterior = actual;
+        actual = actual->siguiente;
+    }
+
+    printf("\nProducto con ID %d no encontrado.\n", id);
+}
