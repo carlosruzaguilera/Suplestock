@@ -28,3 +28,15 @@ typedef struct venta {
 
 extern Producto *tablaHash[TAM_TABLA];
 extern Venta *tablaHashVentas[TAM_TABLA_VENTAS];
+
+// Prototipos de funciones 
+void mostrarMenu();
+int calcularHash(int id); // Funciones Hash
+
+// Funciones de Gestión de Productos
+void registrarProducto(); 
+void eliminarProducto(); 
+void eliminarProductoPorNombre();
+void agregarProductosDesdeCSV();
+void agregarProductoDetalle(int id, char *nombre, float precio_compra, float precio_venta, int cantidad_stock);
+void mostrarListaCompletaProductos();
