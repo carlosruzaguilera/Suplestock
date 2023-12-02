@@ -2,7 +2,59 @@
 
 Felipe Álvarez:
 
+void consultarStock()
 
+    Propósito: Esta función permite consultar el stock de un producto específico.
+    Cómo funciona:
+        Pide al usuario que ingrese el ID del producto.
+        Calcula el índice hash para ese ID y busca el producto en la tabla hash.
+        Recorre una lista enlazada buscando el producto con el ID dado.
+        Si lo encuentra, muestra el nombre y la cantidad en stock del producto.
+        Si no lo encuentra, informa que el producto no está disponible.
+
+void actualizarStock()
+
+    Propósito: Actualizar la cantidad total en stock de un producto.
+    Cómo funciona:
+        Solicita el ID del producto a actualizar.
+        Busca el producto en la tabla hash.
+        Si lo encuentra, muestra la cantidad actual en stock y solicita la nueva cantidad.
+        Actualiza el stock del producto con la nueva cantidad ingresada.
+
+void anadirCantidadStock()
+
+    Propósito: Añadir una cantidad específica al stock de un producto.
+    Cómo funciona:
+        Pide el ID del producto y la cantidad a añadir.
+        Encuentra el producto en la tabla hash.
+        Si lo encuentra, añade la cantidad especificada al stock existente del producto.
+
+void restarCantidadStock()
+
+    Propósito: Restar una cantidad específica del stock de un producto.
+    Cómo funciona:
+        Solicita el ID del producto y la cantidad a restar.
+        Verifica que la cantidad a restar no sea negativa.
+        Busca el producto en la tabla hash.
+        Si lo encuentra y si hay suficiente stock, resta la cantidad especificada del stock.
+
+void establecerNuevaCantidadStock()
+
+    Propósito: Establecer una nueva cantidad total en stock para un producto.
+    Cómo funciona:
+        Pide el ID del producto y la nueva cantidad total en stock.
+        Verifica que la nueva cantidad no sea negativa.
+        Encuentra el producto en la tabla hash.
+        Si lo encuentra, establece la nueva cantidad en stock.
+
+void consultarStockPorNombre()
+
+    Propósito: Buscar un producto por su nombre y consultar su stock.
+    Cómo funciona:
+        Pide el nombre del producto a buscar.
+        Recorre toda la tabla hash buscando el producto por nombre.
+        Si encuentra uno o más productos con ese nombre, muestra su ID y cantidad en stock.
+        Si no encuentra ningún producto con ese nombre, informa que no está disponible.
 
 
 
