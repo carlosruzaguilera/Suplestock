@@ -1,6 +1,5 @@
 **Contribuciones Individuales**
 
-
 Felipe Álvarez:
 
 En mi trabajo en la aplicación de suplementos deportivos, me centré en desarrollar y mejorar funciones clave de gestión de inventario. 
@@ -36,7 +35,6 @@ así como en la implementación de la tabla hash para un manejo eficiente del in
 de productos, incluyendo registrarProducto, eliminarProducto, eliminarProductoPorNombre, agregarProductosDesdeCSV, agregarProductoDetalle, 
 y mostrarListaCompletaProductos. Estas funciones permiten agregar, eliminar, cargar y visualizar productos, jugando un papel crucial en 
 mantener la precisión y eficiencia del inventario en la aplicación.
-
 
 
 
