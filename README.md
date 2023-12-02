@@ -1,33 +1,51 @@
 # Suplestock
+Antes de comenzar
 
-Paso 1: crea una cuenta en GitHub
+Configuración del entorno de desarrollo
 
-- Visite el sitio web de GitHub (https://github.com/).
-Haga clic en el botón "Iniciar sesión" para crear una nueva cuenta.
-Ingrese la información requerida, como nombre de usuario, dirección de correo electrónico y contraseña.
-Siga las instrucciones para verificar su cuenta y completar el proceso de registro.
+Para empezar a trabajar con este proyecto, necesitarás clonar el repositorio y configurar tu entorno de desarrollo.
 
-Paso 2: crea una cuenta en Replit y vincúlala a GitHub
+Clonar el Repositorio
+- Abrir Visual Studio Code (VS Code):
+- Asegúrate de tener instalado Visual Studio Code en tu computadora. Si no lo tienes, puedes descargarlo desde aquí https://code.visualstudio.com/Download.
+- En Visual Studio Code, abre una nueva ventana.
+- Ve a la opción de 'Explorador', que generalmente se encuentra en la barra lateral izquierda.
+- Selecciona la opción para 'Clonar Repositorio'.
+- Introduce la URL del repositorio de GitHub donde se encuentra el código de la aplicación de suplementos deportivos.
+        
+Importar el Proyecto en Visual Studio Code
 
-- Visite el sitio web de Replit (https://replit.com/). Haga clic en "Iniciar sesión" para crear una nueva cuenta con Replit.
-- Utilice la opción de inicio de sesión con su cuenta de GitHub para vincular ambas cuentas.
-Siga las instrucciones para completar el proceso de registro y vinculación de cuentas.
+Para trabajar directamente en VS Code:
 
-Paso 3: sube el archivo CSV
+Abrir el Repositorio Clonado:
+- Una vez clonado el repositorio, abre la carpeta del proyecto en VS Code.
+- Asegúrate de tener todas las extensiones necesarias para C/C++, especialmente si tu proyecto depende de ellas.
+        
+Importar el Proyecto en Replit
+
+Abrir Replit:
+- Ve a Replit y asegúrate de tener una cuenta. Si no, créala aqui https://replit.com/signup 
+       
+Importar desde GitHub:
+- En Replit, selecciona la opción para 'Importar un repositorio'.
+- Pega la URL del repositorio de GitHub.
+- Sigue las instrucciones en pantalla para importar el proyecto.
+
+Sube el archivo CSV
 
 - Abre tu cuenta Replit.
 - Cree una nueva réplica (proyecto) haciendo clic en el botón Crear o Nueva réplica. Haga clic en Archivo en la barra lateral izquierda para abrir el Explorador de archivos.
 - Haga clic en el botón Cargar archivo y seleccione el archivo CSV que desea usar en su aplicación.
 - Confirmar la carga del archivo.
 
-Paso 4: Cómo ejecutar el programa
+Cómo ejecutar el programa
 
 - En Replit, asegúrate de estar en la interfaz principal de tu réplica.
 Localice el archivo principal del programa (en este caso, probablemente sea "hashmap.c" o algo similar). Busque el botón Ejecutar dentro del archivo y haga clic en él para ejecutar el programa.
 - Supervise la salida de la consola para ver cualquier mensaje informativo o de error que aparezca.
 - La aplicación funciona de la siguiente manera.
 
-Paso 5: Funcionamiento de las funciones
+Funcionamiento
 
 - Cuando ejecutes el programa, verás un menú principal con opciones numeradas.
 - Los usuarios pueden seleccionar opciones para administrar productos, inventario, ventas y generar informes.
