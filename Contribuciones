@@ -24,6 +24,10 @@ Javier Díaz:
 
 Carlos Ruz:
 
+desarrollo la parte de las structs princilpales del programa y la tabla hash ademas de las funciones 
+registrarProducto, eliminarProducto, eliminarProductoPorNombre, agregarProductosDesdeCSV, 
+agregarProductoDetalle y mostrarListaCompletaProductos todas estas, funciones destinadas a la gestion de los productos.
+
 
 
 
