@@ -1,0 +1,11 @@
+id,nombre,precio_compra,precio_venta,cantidad_stock
+1001,whey blanca,22000.0,25000.0,12
+1002,whey verde,22000.0,25000.0,16
+1003,Aminoac,25000.0,28000.0,12
+1004,pre entreno,32000.0,35000.0,24
+1005,lipo6 black,32000.0,35000.0,32
+1006,creatina monohydra,27000.0,30000.0,13
+1007,classic whey orange,53000.0,56000.0,21
+1008,nitro whey blue,63000.0,66000.0,14
+1009,carnivor prote,54000.0,57000.0,4
+1010,profesional prote,53000.0,56000.0,6
