@@ -54,3 +54,6 @@ void registrarVenta();
 void buscarVenta();
 void cancelarVenta();
 
+// Funciones de Gestión de Reportes
+void generarReporteVentas();
+

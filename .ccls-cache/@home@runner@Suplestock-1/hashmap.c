@@ -470,3 +470,23 @@ void cancelarVenta() {
 
     printf("\nVenta con ID %d no encontrada.\n", idVenta);
 }
+
+void generarReporteVentas() {
+    printf("\n--- Reporte de Ventas ---\n");
+
+    int hayVentas = 0;
+    for (int i = 0; i < TAM_TABLA_VENTAS; i++) {
+        Venta *venta = tablaHashVentas[i];
+        while (venta != NULL) {
+            printf("\nID Venta: %d, ID Producto: %d, Cantidad Vendida: %d, Total Venta: %.2f\n", 
+                   venta->id_venta, venta->id_producto, venta->cantidad_vendida, venta->total_venta);
+            venta = venta->siguiente;
+            hayVentas = 1;
+        }
+    }
+
+    if (!hayVentas) {
+        printf("\nNo hay ventas registradas.\n");
+    }
+}
+
