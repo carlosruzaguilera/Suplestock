@@ -430,3 +430,43 @@ void buscarVenta() {
     printf("\nVenta con ID %d no encontrada.\n", id_venta);
 }
 
+void cancelarVenta() {
+    int idVenta;
+    printf("\nIngrese ID de la venta a cancelar: ");
+    scanf("%d", &idVenta);
+
+    int indiceVenta = idVenta % TAM_TABLA_VENTAS;
+    Venta *venta = tablaHashVentas[indiceVenta];
+    Venta *anterior = NULL;
+
+    // Buscar la venta en la lista enlazada
+    while (venta != NULL) {
+        if (venta->id_venta == idVenta) {
+            // Encontrar el producto correspondiente y actualizar su stock
+            int indiceProducto = calcularHash(venta->id_producto);
+            Producto *producto = tablaHash[indiceProducto];
+
+            while (producto != NULL) {
+                if (producto->id == venta->id_producto) {
+                    producto->cantidad_stock += venta->cantidad_vendida;
+                    break;
+                }
+                producto = producto->siguiente;
+            }
+
+            // Eliminar la venta de la lista enlazada
+            if (anterior == NULL) {
+                tablaHashVentas[indiceVenta] = venta->siguiente;
+            } else {
+                anterior->siguiente = venta->siguiente;
+            }
+            free(venta);
+            printf("\nVenta con ID %d cancelada correctamente.\n", idVenta);
+            return;
+        }
+        anterior = venta;
+        venta = venta->siguiente;
+    }
+
+    printf("\nVenta con ID %d no encontrada.\n", idVenta);
+}

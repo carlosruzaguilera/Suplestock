@@ -52,4 +52,5 @@ void consultarStockPorNombre();
 // Función de Gestión de Ventas
 void registrarVenta();
 void buscarVenta();
+void cancelarVenta();
 
