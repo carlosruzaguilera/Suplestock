@@ -1,6 +1,10 @@
-Suplestock
 
-Antes de comenzar
+**SUPLESTOCK**
+
+¡Bienvenido a nuestra aplicación de gestión de inventario de suplementos deportivos llamada "SupleStock"! Esta aplicación ha sido diseñada para simplificar y optimizar el control de los productos relacionados con el mundo del deporte. Con una variedad de funciones, como registro y eliminación de productos, seguimiento de stock, generación de reportes de ventas y análisis de ganancias, nuestra herramienta ofrece una solución integral para administrar eficientemente los artículos disponibles. Con una estructura basada en tablas hash y funciones modulares, nuestra aplicación proporciona una gestión ágil y detallada para mejorar la administración de suplementos deportivos.
+
+
+**Antes de comenzar a utilizar la aplicación debes realizar lo siguiente:**
 
 Configuración del entorno de desarrollo
 
@@ -43,7 +47,9 @@ Sube el archivo CSV
     Haga clic en el botón Cargar archivo y seleccione el archivo CSV que desea usar en su aplicación.
     Confirmar la carga del archivo.
 
-Cómo ejecutar el programa
+    
+
+**Cómo ejecutar el programa**
 
     En Replit, asegúrate de estar en la interfaz principal de tu réplica. Localice el archivo principal del programa (en este caso, probablemente sea "hashmap.c" o algo similar). Busque el botón Ejecutar dentro del archivo y haga clic en él para ejecutar el programa.
     Supervise la salida de la consola para ver cualquier mensaje informativo o de error que aparezca.
