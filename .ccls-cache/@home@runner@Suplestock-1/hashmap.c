@@ -408,3 +408,25 @@ void registrarVenta(){
 
   printf("\nVenta registrada exitosamente.\n");
 }
+
+void buscarVenta() {
+    int id_venta;
+    printf("\nIngrese ID de la venta a buscar: ");
+    scanf("%d", &id_venta);
+
+    int indice = id_venta % TAM_TABLA_VENTAS;
+    Venta *venta = tablaHashVentas[indice];
+
+    // Buscar en la lista enlazada
+    while (venta != NULL) {
+        if (venta->id_venta == id_venta) {
+            printf("\nVenta encontrada: ID Producto %d, Cantidad Vendida %d, Total Venta %.2f\n",
+                   venta->id_producto, venta->cantidad_vendida, venta->total_venta);
+            return;
+        }
+        venta = venta->siguiente;
+    }
+
+    printf("\nVenta con ID %d no encontrada.\n", id_venta);
+}
+
