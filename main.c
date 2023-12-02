@@ -236,3 +236,54 @@ int main() {
 
     return 0;
 }
+
+void mostrarMenu(){
+  // Sección del encabezado
+  printf("\n");
+  printf("\033[1;36m╔═══════════════════════════════════╗\033[0m\n");
+  printf("\033[1;36m║\033[0m"    "\033[1;34m            SUPLESTOCK        \033[0m"   "\033[1;36m     ║ \033[0m\n");
+  printf("\033[1;36m║\033[0m"    "\033[1;34m  Gestión de Inventario y Ventas\033[0m"   "\033[1;36m   ║ \033[0m\n");
+  printf("\033[1;36m╚═══════════════════════════════════╝\033[0m\n\n");
+
+  // Sección de opciones para productos
+  printf("\033[1;36m╔═══════════════════════════════════╗\033[0m\n");
+  printf("\033[1;36m║\033[0m"    "\033[1;34m    Opciones para los Productos\033[0m"   "\033[1;36m    ║ \033[0m\n");
+  printf("\033[1;36m╠═══════════════════════════════════╣\033[0m\n");
+  printf("\033[0;36m║  1. Agregar Producto              ║\033[0m\n");
+  printf("\033[0;36m║  2. Eliminar Producto por Nombre  ║\033[0m\n");
+  printf("\033[0;36m║  3. Eliminar Producto por ID      ║\033[0m\n");
+  printf("\033[1;36m╚═══════════════════════════════════╝\033[0m\n\n");
+
+  // Sección de opciones para el stock
+  printf("\033[1;36m╔═══════════════════════════════════╗\033[0m\n");
+  printf("\033[1;36m║\033[0m"    "\033[1;34m        Opciones para Stock\033[0m"   "\033[1;36m        ║ \033[0m\n");
+  printf("\033[1;36m╠═══════════════════════════════════╣\033[0m\n");
+  printf("\033[0;36m║  4. Actualizar Stock              ║\033[0m\n");
+  printf("\033[0;36m║  5. Consultar Stock               ║\033[0m\n");
+  printf("\033[1;36m╚═══════════════════════════════════╝\033[0m\n\n");
+
+  // Sección de opciones para ventas
+  printf("\033[1;36m╔═══════════════════════════════════╗\033[0m\n");
+  printf("\033[1;36m║\033[0m"    "\033[1;34m        Opciones para Ventas\033[0m"   "\033[1;36m       ║ \033[0m\n");
+  printf("\033[1;36m╠═══════════════════════════════════╣\033[0m\n");
+  printf("\033[0;36m║  6. Registrar Venta               ║\033[0m\n");
+  printf("\033[0;36m║  7. Cancelar Venta                ║\033[0m\n");
+  printf("\033[1;36m╚═══════════════════════════════════╝\033[0m\n\n");
+
+  // Sección de opciones para generar reporte
+  printf("\033[1;36m╔═══════════════════════════════════╗\033[0m\n");
+  printf("\033[1;36m║\033[0m"    "\033[1;34m    Opción para Generar Reporte\033[0m"   "\033[1;36m    ║ \033[0m\n");
+  printf("\033[1;36m╠═══════════════════════════════════╣\033[0m\n");
+  printf("\033[0;36m║  8. Generar Reporte               ║\033[0m\n");
+  printf("\033[1;36m╚═══════════════════════════════════╝\033[0m\n\n");
+
+  // Opción salir del programa
+  printf("\033[1;36m╔═══════════════════════════════════╗\033[0m\n");
+  printf("\033[1;36m║\033[0m"    "\033[1;34m   Opción para Salir del Programa\033[0m"   "\033[1;36m  ║ \033[0m\n");
+  printf("\033[1;36m╠═══════════════════════════════════╣\033[0m\n");
+  printf("\033[0;36m║  0. Salir del Programa            ║\033[0m\n");
+  printf("\033[1;36m╚═══════════════════════════════════╝\033[0m\n\n");
+
+  // Sección del pie de página
+  printf("\033[1;20m Seleccione una opción: \033[0m");  
+}
