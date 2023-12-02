@@ -119,3 +119,60 @@ int main() {
               } while (subOpcionActualizar != 4);
               break;
           }
+          case 5: {
+            int subOpcionConsultar;
+            do {
+
+
+              printf("\n");
+              printf("\033[1;36m╔═══════════════════════════════════╗\033[0m\n");
+              printf("\033[1;36m║\033[0m"    "\033[1;34m     Submenú Consultar Stock\033[0m"   "\033[1;36m       ║ \033[0m\n");
+              printf("\033[1;36m╚═══════════════════════════════════╝\033[0m\n\n");
+
+              printf("\033[1;36m╔═══════════════════════════════════╗\033[0m\n");
+              printf("\033[0;36m║  1. Consultar Stock por Nombre    ║\033[0m\n");
+              printf("\033[1;36m╚═══════════════════════════════════╝\033[0m\n\n");
+
+              printf("\033[1;36m╔═══════════════════════════════════╗\033[0m\n");
+              printf("\033[0;36m║  2. Consultar Stock por ID        ║\033[0m\n");
+              printf("\033[1;36m╚═══════════════════════════════════╝\033[0m\n\n");
+
+              printf("\033[1;36m╔═══════════════════════════════════════════════════╗\033[0m\n");
+              printf("\033[0;36m║  3. Mostrar Lista Completa de Productos con Stock ║\033[0m\n");
+              printf("\033[1;36m╚═══════════════════════════════════════════════════╝\033[0m\n\n");
+
+              printf("\033[1;36m╔═══════════════════════════════════╗\033[0m\n");
+              printf("\033[0;36m║  4. Volver al Menú Principal      ║\033[0m\n");
+              printf("\033[1;36m╚═══════════════════════════════════╝\033[0m\n\n");
+
+                printf("Seleccione una opción: ");
+
+              if (scanf("%d", &subOpcionConsultar) != 1) {
+                    printf("\nOpción no válida. Intente de nuevo.\n");
+                    while (getchar() != '\n'); // Limpiar el búfer de entrada
+                    continue; // Ignorar la opción no válida y volver a mostrar el menú
+                }
+              getchar();
+
+                switch (subOpcionConsultar) {
+                    case 1:
+                        consultarStockPorNombre();
+                        break;
+                    case 2:
+                        consultarStock();
+                        break;
+                    case 3:
+                        mostrarListaCompletaProductos();
+                        break;
+                    default:
+                        printf("\nOpción no válida. Intente de nuevo.\n");
+                }
+            } while (subOpcionConsultar != 4);
+            break;
+          }
+          case 6:
+            registrarVenta();
+            break;
+          case 7:
+            cancelarVenta();
+            break;
