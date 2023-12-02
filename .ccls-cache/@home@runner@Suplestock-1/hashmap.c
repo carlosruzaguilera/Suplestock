@@ -510,3 +510,33 @@ void generarReporteStock() {
     }
 }
 
+void generarReporteGanancias() {
+    printf("\n--- Reporte de Ganancias ---\n");
+
+    float gananciasTotales = 0.0;
+    int hayVentas = 0;
+    for (int i = 0; i < TAM_TABLA_VENTAS; i++) {
+        Venta *venta = tablaHashVentas[i];
+        while (venta != NULL) {
+            int indiceProducto = calcularHash(venta->id_producto);
+            Producto *producto = tablaHash[indiceProducto];
+
+            while (producto != NULL) {
+                if (producto->id == venta->id_producto) {
+                    float gananciaPorVenta = (producto->precio_venta - producto->precio_compra) * venta->cantidad_vendida;
+                    gananciasTotales += gananciaPorVenta;
+                    hayVentas = 1;
+                    break; // Producto encontrado, salir del bucle interno
+                }
+                producto = producto->siguiente;
+            }
+            venta = venta->siguiente;
+        }
+    }
+
+    if (hayVentas) {
+        printf("\nGanancias totales de las ventas: %.2f\n", gananciasTotales);
+    } else {
+        printf("\nNo hay ventas registradas para calcular ganancias.\n");
+    }
+}

@@ -57,4 +57,7 @@ void cancelarVenta();
 // Funciones de Gestión de Reportes
 void generarReporteVentas();
 void generarReporteStock();
+void generarReporteGanancias();
+
+#endif // HASHMAP_H
 
