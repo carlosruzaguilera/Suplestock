@@ -362,3 +362,49 @@ void consultarStockPorNombre() {
         printf("\nProducto con nombre '%s' no encontrado.\n", nombreBuscado);
     }
 }
+
+void registrarVenta(){
+  Venta venta;
+
+  printf("\nIngrese ID de la venta: ");
+  scanf("%d", &venta.id_venta);
+  printf("\nIngrese ID del producto vendido: ");
+  scanf("%d", &venta.id_producto);
+  printf("\nIngrese cantidad vendida: ");
+  scanf("%d", &venta.cantidad_vendida);
+
+  // Buscar el producto para obtener el precio de venta
+  int indiceProducto = calcularHash(venta.id_producto);
+  Producto *producto = tablaHash[indiceProducto];
+  int productoEncontrado = 0;
+
+  while (producto != NULL) {
+      if (producto->id == venta.id_producto) {
+          venta.total_venta = venta.cantidad_vendida * producto->precio_venta;
+          productoEncontrado = 1;
+          break;
+      }
+      producto = producto->siguiente;
+  }
+
+  if (!productoEncontrado) {
+      printf("\nProducto con ID %d no encontrado. No se puede registrar la venta.\n", venta.id_producto);
+      return;
+  }
+
+  // Registrar la venta en la tabla hash de ventas
+  int indiceVenta = venta.id_venta % TAM_TABLA_VENTAS;
+  Venta *nuevaVenta = (Venta *)malloc(sizeof(Venta));
+  *nuevaVenta = venta;
+  nuevaVenta->siguiente = NULL;
+
+  if (tablaHashVentas[indiceVenta] == NULL) {
+      tablaHashVentas[indiceVenta] = nuevaVenta;
+  } else {
+      // Insertar al inicio de la lista para manejar colisiones
+      nuevaVenta->siguiente = tablaHashVentas[indiceVenta];
+      tablaHashVentas[indiceVenta] = nuevaVenta;
+  }
+
+  printf("\nVenta registrada exitosamente.\n");
+}

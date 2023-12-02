@@ -48,3 +48,7 @@ void anadirCantidadStock();
 void restarCantidadStock();
 void establecerNuevaCantidadStock();
 void consultarStockPorNombre();
+
+// Función de Gestión de Ventas
+void registrarVenta();
+
