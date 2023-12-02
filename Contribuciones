@@ -2,9 +2,12 @@
 
 Felipe Álvarez:
 
-Funciones consultarStock y consultarStockPorNombre permiten buscar productos por ID o nombre, mostrando su disponibilidad. 
-actualizarStock, anadirCantidadStock, restarCantidadStock y establecerNuevaCantidadStock facilitan la actualización de la 
-cantidad de productos en stock, ya sea aumentando, disminuyendo o estableciendo un nuevo nivel de inventario. 
+En mi trabajo en la aplicación de suplementos deportivos, me centré en desarrollar y mejorar funciones clave de gestión de inventario. 
+Implementé consultarStock y consultarStockPorNombre para permitir búsquedas rápidas de productos por ID o nombre, facilitando a los 
+usuarios la verificación de la disponibilidad del inventario. Además, trabajé en actualizarStock, anadirCantidadStock, 
+restarCantidadStock y establecerNuevaCantidadStock, que son cruciales para ajustar las cantidades en el stock, ya sea aumentando, 
+disminuyendo o estableciendo nuevos niveles. Mi objetivo fue asegurar que estas funciones fueran eficientes y fáciles de usar, mejorando 
+así la gestión del inventario y la experiencia del usuario en nuestra aplicación.
 
 
 Cristopher Dauros:
